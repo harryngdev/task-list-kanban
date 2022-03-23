@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/task-list-kanban/static/css/main.03149361.css",
+    "main.js": "/task-list-kanban/static/js/main.6c458b3d.js",
+    "static/media/logo.png": "/task-list-kanban/static/media/logo.11e067ef227d077f053f.png",
+    "index.html": "/task-list-kanban/index.html",
+    "static/media/dropdown-icon.svg": "/task-list-kanban/static/media/dropdown-icon.ff186fa239b14332403a435e2accb3f2.svg",
+    "static/media/check-success.svg": "/task-list-kanban/static/media/check-success.965df714b22344b98ce96e75995b663b.svg",
+    "main.03149361.css.map": "/task-list-kanban/static/css/main.03149361.css.map",
+    "main.6c458b3d.js.map": "/task-list-kanban/static/js/main.6c458b3d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.03149361.css",
+    "static/js/main.6c458b3d.js"
+  ]
+}
