@@ -1,9 +1,9 @@
-import LogoComponent from "components/LogoComponent";
-import React, { useState, useEffect } from "react";
-import { Dropdown } from "react-bootstrap";
-import Logo from "assets/logo/logo.png";
-import { ReactComponent as DropdownIcon } from "assets/icon/dropdown-icon.svg";
 import { ReactComponent as SuccessIcon } from "assets/icon/check-success.svg";
+import { ReactComponent as DropdownIcon } from "assets/icon/dropdown-icon.svg";
+import Logo from "assets/logo/logo.png";
+import LogoComponent from "components/LogoComponent";
+import React, { useEffect, useState } from "react";
+import { Dropdown } from "react-bootstrap";
 
 const Header = () => {
   const [theme, setTheme] = useState("light");
@@ -39,6 +39,9 @@ const Header = () => {
         <div
           className="header-logo"
           style={{ backgroundImage: `url(${Logo})` }}
+          onClick={() =>
+            (window.location.href = "https://nvanha.github.io/myweb/")
+          }
         />
         <div className="header-title">
           <LogoComponent size={20} /> Task List

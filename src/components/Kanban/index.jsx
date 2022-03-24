@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
-import mockData from "mockData";
 import Card from "components/Card";
+import React from "react";
+import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 
-const Kanban = () => {
-  const [data, setData] = useState(mockData);
-
+const Kanban = ({ data, setData, handleEditTask }) => {
+  /**
+   * Handle Drag and Drop Card Item
+   */
   const onDragEnd = (result) => {
     if (!result.destination) return;
     const { source, destination } = result;
@@ -28,6 +28,7 @@ const Kanban = () => {
       data[sourceColIndex].tasks = sourceTask;
       data[destinationColIndex].tasks = destinationTask;
 
+      localStorage.setItem("dataTaskListState", JSON.stringify(data));
       setData(data);
     }
   };
@@ -65,8 +66,9 @@ const Kanban = () => {
                             ...provided.draggableProps.style,
                             opacity: snapshot.isDragging ? "0.5" : "1",
                           }}
+                          onClick={() => handleEditTask(task)}
                         >
-                          <Card>{task.title}</Card>
+                          <Card data={task}>{task.title}</Card>
                         </div>
                       )}
                     </Draggable>
